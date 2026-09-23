@@ -1,0 +1,21 @@
+footer {
+  background: #161b28;
+  color: #9ca3b3;
+  padding: 35px max(5%, calc((100vw - 1180px) / 2));
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+footer b {
+  color: #fff;
+  font-size: 18px;
+}
+footer p {
+  margin: 7px 0;
+}
+
+@media (max-width: 650px) {
+  footer {
+    display: block;
+  }
+}

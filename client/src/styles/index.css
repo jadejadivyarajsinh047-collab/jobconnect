@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
+
+/* ---------- Design tokens ---------- */
+:root {
+  --ink: #18202f;
+  --muted: #70798b;
+  --line: #e6e9ef;
+  --bg: #f7f8fb;
+  --white: #fff;
+  --accent: #635bff;
+  --accent2: #817aff;
+  --green: #13a56a;
+  --red: #e5484d;
+}
+
+/* ---------- Reset / base elements ---------- */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+  border: 0;
+}
+h1,
+h2,
+h3 {
+  font-family: Manrope;
+}
+
+/* ---------- Global text/utility helpers (used across many pages) ---------- */
+.accent {
+  color: var(--accent);
+}
+.muted {
+  color: var(--muted);
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 1.7px;
+  font-weight: 800;
+  color: var(--accent);
+}
+.full {
+  width: 100%;
+  border: 0;
+}
+.loader {
+  min-height: 200px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+}
+
+/* ---------- Global page/layout wrappers ---------- */
+.page {
+  min-height: calc(100vh - 74px);
+}
+.content {
+  max-width: 1180px;
+  margin: auto;
+  padding: 55px 25px;
+}
+.content.narrow {
+  max-width: 900px;
+}
+.pageTitle {
+  margin-bottom: 30px;
+}
+.pageTitle h1 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+.pageTitle p {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* ---------- Global buttons (used on nearly every page) ---------- */
+.primary {
+  background: var(--accent);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 700;
+}
+.primary:hover {
+  background: #544cf0;
+}
+.primary.small {
+  padding: 10px 15px;
+}
+.secondary {
+  background: white;
+  border: 1px solid var(--line);
+  padding: 12px 18px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
+/* ---------- Shared building blocks (used across 2+ unrelated pages) ---------- */
+.companyLogo {
+  width: 46px;
+  height: 46px;
+  border-radius: 11px;
+  background: #eeecff;
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 20px;
+}
+.companyLogo.big {
+  width: 68px;
+  height: 68px;
+  font-size: 28px;
+}
+.profileAvatar {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #e9e7ff;
+  color: var(--accent);
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.profileAvatar.small {
+  width: 42px;
+  height: 42px;
+  font-size: 16px;
+  margin: 0;
+}
+.status {
+  font-size: 11px;
+  background: #eeecff;
+  color: var(--accent);
+  padding: 7px 10px;
+  border-radius: 20px;
+}
+.status.selected {
+  background: #e7faef;
+  color: var(--green);
+}
+.status.rejected {
+  background: #fff0f0;
+  color: var(--red);
+}
+.candidateRow {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 15px 18px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 9px 0;
+}
+.candidateRow > div:nth-child(2) {
+  flex: 1;
+}
+.candidateRow p {
+  margin: 4px 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+.candidateRow select {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px;
+  background: #fff;
+}
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.metricGrid > div {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 22px;
+}
+.metricGrid svg {
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.metricGrid b,
+.metricGrid span {
+  display: block;
+}
+.metricGrid b {
+  font-size: 28px;
+}
+.metricGrid span {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+.dashSection {
+  margin-top: 30px;
+}
+.jobsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+}
+
+/* ---------- Shared responsive rules ---------- */
+@media (max-width: 900px) {
+  .metricGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .jobsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 650px) {
+  .pageTitle h1 {
+    font-size: 34px;
+  }
+  .metricGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .jobsGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,13 @@
+import { Router } from "express";
+import { auth, allow } from "../middleware/auth.js";
+import * as c from "../controllers/job.controller.js";
+const r = Router();
+r.get("/", c.list);
+r.get("/mine", auth, allow("recruiter", "admin"), c.mine);
+r.get("/saved", auth, allow("candidate"), c.saved);
+r.get("/:id", c.getOne);
+r.post("/", auth, allow("recruiter", "admin"), c.create);
+r.put("/:id", auth, allow("recruiter", "admin"), c.update);
+r.delete("/:id", auth, allow("recruiter", "admin"), c.remove);
+r.post("/:id/save", auth, allow("candidate"), c.toggleSave);
+export default r;

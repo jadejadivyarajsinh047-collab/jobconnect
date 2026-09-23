@@ -1,0 +1,62 @@
+.jobCard {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  padding: 20px;
+  transition: 0.2s;
+}
+.jobCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px #1b234012;
+}
+.jobTop {
+  display: flex;
+  justify-content: space-between;
+}
+.bookmark {
+  background: transparent;
+  color: #9aa1af;
+}
+.jobCard h3 {
+  margin: 18px 0 5px;
+  font-size: 18px;
+}
+.jobMeta {
+  display: flex;
+  gap: 13px;
+  margin: 17px 0;
+  color: #667083;
+  font-size: 12px;
+}
+.jobMeta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+.chips span {
+  font-size: 11px;
+  background: #f2f3f6;
+  color: #606a7b;
+  border-radius: 20px;
+  padding: 6px 9px;
+}
+.jobBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  font-size: 12px;
+}
+.jobBottom b {
+  color: #353c4d;
+}
+.jobBottom span {
+  color: var(--muted);
+}

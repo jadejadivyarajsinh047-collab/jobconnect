@@ -1,0 +1,58 @@
+.dashboardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 30px;
+}
+.dashboardHead h1 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+.dashboardHead p {
+  color: var(--muted);
+  font-size: 16px;
+}
+.jobForm {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+.jobForm input,
+.jobForm select {
+  width: 100%;
+  border: 1px solid #dfe3ea;
+  border-radius: 9px;
+  padding: 12px;
+  margin: 6px 0 12px;
+  outline: 0;
+}
+.jobForm textarea {
+  width: 100%;
+  border: 1px solid #dfe3ea;
+  border-radius: 9px;
+  padding: 12px;
+  margin: 5px 0 12px;
+  outline: 0;
+  min-height: 130px;
+  resize: vertical;
+}
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 12px;
+}
+
+@media (max-width: 650px) {
+  .dashboardHead {
+    align-items: start;
+    gap: 15px;
+  }
+  .dashboardHead h1 {
+    font-size: 34px;
+  }
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}

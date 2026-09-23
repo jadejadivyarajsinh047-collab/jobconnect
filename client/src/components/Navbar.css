@@ -1,0 +1,84 @@
+.navbar {
+  height: 74px;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  padding: 0 max(5%, calc((100vw - 1180px) / 2));
+  gap: 45px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.logo {
+  font-family: Manrope;
+  font-size: 22px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logoMark {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: white;
+  display: grid;
+  place-items: center;
+}
+.navMenu {
+  display: flex;
+  gap: 25px;
+  font-size: 14px;
+  color: #5f6879;
+  flex: 1;
+}
+.navMenu a:hover {
+  color: var(--accent);
+}
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 14px;
+}
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.iconBtn {
+  background: transparent;
+  color: var(--muted);
+}
+
+/* ---------- Notification bell + unread dot ---------- */
+.notifBell {
+  position: relative;
+  display: inline-flex;
+  line-height: 0; /* keeps the dot tight against the icon */
+}
+.notifDot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 9px;
+  height: 9px;
+  background: var(--red);
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    padding: 0 16px;
+    gap: 12px;
+  }
+  .navMenu {
+    display: none;
+  }
+  .navRight {
+    margin-left: auto;
+  }
+}

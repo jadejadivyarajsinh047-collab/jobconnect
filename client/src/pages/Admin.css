@@ -1,0 +1,6 @@
+.danger {
+  background: #fff0f0;
+  color: var(--red);
+  padding: 8px 10px;
+  border-radius: 8px;
+}

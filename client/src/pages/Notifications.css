@@ -1,0 +1,17 @@
+.notification {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 18px;
+  border-radius: 12px;
+  margin: 9px 0;
+}
+.notification.unread {
+  border-left: 3px solid var(--accent);
+}
+.notification p {
+  color: var(--muted);
+  margin: 6px 0;
+}
+.notification small {
+  color: #a0a6b2;
+}
