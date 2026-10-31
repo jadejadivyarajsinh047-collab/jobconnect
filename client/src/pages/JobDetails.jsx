@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { MapPin, Clock3, ArrowLeft, CheckCircle2 } from "lucide-react";
 import api from "../api";
 import { useAuth } from "../context/AuthContext";
-import "./JobDetails.css";
+import "./jobDetails.css";
 export default function JobDetails() {
   const { id } = useParams();
   const [j, setJ] = useState(null);
