@@ -3,7 +3,7 @@ import { MapPin, Clock3, Bookmark } from "lucide-react";
 import api from "../api";
 import { useAuth } from "../context/AuthContext";
 import { useState } from "react";
-import "./JobCard.css";
+import "./jobCard.css";
 export default function JobCard({ job }) {
   const { user } = useAuth();
   const [saved, setSaved] = useState(false);
