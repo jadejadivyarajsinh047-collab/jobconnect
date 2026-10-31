@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Search, SlidersHorizontal } from "lucide-react";
 import api from "../api";
 import JobCard from "../components/JobCard";
-import "./Jobs.css";
+import "./jobs.css";
 export default function Jobs() {
   const [jobs, setJobs] = useState([]),
     [filters, setFilters] = useState({
