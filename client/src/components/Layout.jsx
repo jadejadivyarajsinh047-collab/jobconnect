@@ -10,7 +10,7 @@ export default function Layout({ children }) {
           <b>JobConnect</b>
           <p>Helping talent find meaningful careers.</p>
         </div>
-        <div>Built with MERN Stack · Placement Portfolio Project</div>
+        <div>job connect for best opportunities</div>
       </footer>
     </>
   );
