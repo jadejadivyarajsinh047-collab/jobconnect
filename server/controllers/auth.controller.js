@@ -69,3 +69,16 @@ export function logout(req, res) {
     message: "Logged out",
   });
 }
+export async function me(req, res) {
+  try {
+    const u = await User.findById(req.user.id).select("-password");
+
+    if (!u) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    res.json({ user: publicUser(u) });
+  } catch (error) {
+    res.status(500).json({ message: "Failed to fetch user" });
+  }
+}
